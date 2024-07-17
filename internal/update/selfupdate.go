@@ -11,7 +11,7 @@ import (
 	"github.com/rhysd/go-github-selfupdate/selfupdate"
 )
 
-const Version = "0.1.0"
+const Version = "0.1.2"
 
 func DoSelfUpdate() bool {
 	v := semver.MustParse(Version)
@@ -35,7 +35,7 @@ func DoSelfUpdateMac() bool {
 	latest, found, _ := selfupdate.DetectLatest("laszlo-lazuer/wails-poc")
 	if found {
 		homeDir, _ := os.UserHomeDir()
-		downloadPath := filepath.Join(homeDir, "Downloads", "RiftShare.zip")
+		downloadPath := filepath.Join(homeDir, "Downloads", "basic.zip")
 		err := exec.Command("curl", "-L", latest.AssetURL, "-o", downloadPath).Run()
 		if err != nil {
 			log.Println("curl error:", err)

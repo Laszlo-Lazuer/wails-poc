@@ -31,6 +31,7 @@ function App() {
 
 
             <h1> Result is {result}</h1>
+            <p>V0.1.2</p>
         </div>
     )
 }
