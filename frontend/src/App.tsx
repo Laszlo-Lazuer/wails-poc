@@ -13,7 +13,7 @@ function App() {
     const [result, setResult] = useState("");
 
     useEffect(() => {
-        Add(+input.num1, +input.num2).then((v) => setResult(v));
+        Add(+input.num1, +input.num2).then((v) => setResult(String(v)));
     }, [input])
 
     function handleChange(event: ChangeEvent<HTMLInputElement>): void {
