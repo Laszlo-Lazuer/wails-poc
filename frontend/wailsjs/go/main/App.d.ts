@@ -3,4 +3,8 @@
 
 export function Add(arg1:number,arg2:number):Promise<number>;
 
+export function GetCurrentVersion():Promise<string>;
+
 export function Greet(arg1:string):Promise<string>;
+
+export function UpdateCheckUI():Promise<void>;

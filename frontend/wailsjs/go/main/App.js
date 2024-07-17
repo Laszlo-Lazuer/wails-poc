@@ -6,6 +6,14 @@ export function Add(arg1, arg2) {
   return window['go']['main']['App']['Add'](arg1, arg2);
 }
 
+export function GetCurrentVersion() {
+  return window['go']['main']['App']['GetCurrentVersion']();
+}
+
 export function Greet(arg1) {
   return window['go']['main']['App']['Greet'](arg1);
+}
+
+export function UpdateCheckUI() {
+  return window['go']['main']['App']['UpdateCheckUI']();
 }

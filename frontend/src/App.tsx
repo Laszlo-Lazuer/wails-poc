@@ -2,7 +2,7 @@ import {ChangeEvent, useEffect, useState} from 'react';
 import logo from './assets/images/logo-universal.png';
 import './App.css';
 import {Greet} from "../wailsjs/go/main/App";
-import { Add } from "../wailsjs/go/main/App";
+import { Add, UpdateCheckUI } from "../wailsjs/go/main/App";
 
 function App() {
     const[input, setInput] = useState({
@@ -14,6 +14,7 @@ function App() {
 
     useEffect(() => {
         Add(+input.num1, +input.num2).then((v) => setResult(String(v)));
+        UpdateCheckUI();
     }, [input])
 
     function handleChange(event: ChangeEvent<HTMLInputElement>): void {
